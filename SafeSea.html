@@ -1,0 +1,272 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAFE SEA</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f7fa;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:#003b5c;
+      color:rgb(255, 255, 255);
+      text-align:center;
+      padding:25px;
+    }
+
+    header h1{
+      font-size:45px;
+    }
+
+    nav{
+      background:#005b8f;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:rgb(0, 0, 0);
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:#ffd166;
+    }
+
+    .banner{
+      height:400px;
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200') center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      text-align:center;
+    }
+
+    .banner h2{
+      background none;
+      padding:20px;
+      border-radius:10px;
+      font-size:50px;
+    }
+
+    section{
+      padding:50px 10%;
+    }
+
+    h2{
+      margin-bottom:20px;
+      color:#000000;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:rgb(255, 255, 255);
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(245, 243, 243, 0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#003b5c;
+    }
+
+    button{
+      background:#005b8f;
+      color:rgb(255, 255, 255);
+      border:none;
+      padding:12px 20px;
+      margin-top:15px;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#0077b6;
+    }
+
+    .info{
+      display:none;
+      margin-top:15px;
+      background:#eaf6ff;
+      padding:15px;
+      border-radius:8px;
+      border-left:5px solid #005b8f;
+    }
+
+    footer{
+      background:#003b5c;
+      color:rgb(255, 255, 255);
+      text-align:center;
+      padding:20px;
+      margin-top:30px;
+    }
+
+    @media(max-width:768px){
+
+      .banner h2{
+        font-size:32px;
+      }
+
+      nav a{
+        display:block;
+        margin:10px 0;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <h1>SAFE SEA</h1>
+    <p>Segurança e Soluções Marítimas</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="banner">
+    <h2>Navegue com Segurança</h2>
+  </div>
+
+  <section id="sobre">
+
+    <h2>Sobre a SAFE SEA</h2>
+
+    <p>
+      Safe Sea é uma empresa especializada em experiências de observação marítima no fundo do mar, localizada no coração do Rio de Janeiro. Oferecemos viagens inesquecíveis em cápsulas subaquáticas equipadas com amplas janelas panorâmicas, proporcionando aos visitantes uma visão privilegiada da vida marinha em seu habitat natural.
+    </p>
+
+  </section>
+
+  <section id="servicos">
+
+    <h2>O que oferecemos</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Observação marítima</h3>
+
+        <p>
+          Observamos a vida marinha de perto.
+        </p>
+
+        <button onclick="mostrarInfo('info1')">
+          Saiba mais
+        </button>
+
+        <div id="info1" class="info">
+          Durante os passeios subaquáticos, os visitantes podem observar peixes exóticos, corais coloridos e diferentes espécies marinhas em seu habitat natural com total segurança e conforto.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Aprendizado sobre o oceano</h3>
+
+        <p>
+          Você conhece mais sobre um lugar nunca antes explorado.
+        </p>
+
+        <button onclick="mostrarInfo('info2')">
+          Saiba mais
+        </button>
+
+        <div id="info2" class="info">
+          Nossos especialistas compartilham curiosidades sobre os oceanos, preservação ambiental, espécies marinhas e a importância da conservação da vida no mar.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Aventura e diversão</h3>
+
+        <p>
+          Uma experiência única a ser vivida.
+        </p>
+
+        <button onclick="mostrarInfo('info3')">
+          Saiba mais
+        </button>
+
+        <div id="info3" class="info">
+          Viva uma aventura emocionante explorando o fundo do mar em cápsulas modernas e seguras, perfeitas para famílias, turistas e amantes da natureza.
+        </div>
+      </div>
+
+    </div>
+
+    <button onclick="mensagem()">
+      Clique Aqui
+    </button>
+
+  </section>
+
+  <section id="contato">
+
+    <h2>Contato</h2>
+
+    <p>Email: contato@safesea.com</p>
+    <p>Telefone: +55 (21) 98765-4321</p>
+
+  </section>
+
+  <footer>
+    <p>© 2026 SAFE SEA - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+
+    function mensagem(){
+      alert("Bem-vindo à SAFE SEA!");
+    }
+
+    function mostrarInfo(id){
+
+      let info = document.getElementById(id);
+
+      if(info.style.display === "block"){
+        info.style.display = "none";
+      } else {
+        info.style.display = "block";
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
+```
